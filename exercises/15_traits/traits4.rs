@@ -11,8 +11,8 @@ impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
 // TODO: Fix the compiler error by only changing the signature of this function.
-fn compare_license_types(software1: ???, software2: ???) -> bool {
-    software1.licensing_info() == software2.licensing_info()
+fn compare_license_types<T: Licensed, U: Licensed>(a: T, b: U) -> bool {
+    a.licensing_info() == b.licensing_info()
 }
 
 fn main() {
