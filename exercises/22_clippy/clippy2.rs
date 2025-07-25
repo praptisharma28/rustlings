@@ -1,3 +1,4 @@
+#[allow(for_loops_over_fallibles)]
 fn main() {
     let mut res = 42;
     let option = Some(12);
